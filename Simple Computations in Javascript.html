@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+</head>
+<body>
+
+<script>
+    function convertUnits() {
+        // Get user input and selected option
+        var inputValue = parseFloat(prompt("Enter the value to convert:"));
+        var conversionType = parseInt(prompt("Choose conversion:\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit\n3. Meters to Feet\n4. Feet to Meters"));
+
+        // Check the selected option and perform the conversion
+        switch (conversionType) {
+            case 1:
+                var celsius = (inputValue - 32) * 5/9;
+                alert(inputValue + " Fahrenheit is equal to " + celsius.toFixed(2) + " Celsius");
+                break;
+            case 2:
+                var fahrenheit = (inputValue * 9/5) + 32;
+                alert(inputValue + " Celsius is equal to " + fahrenheit.toFixed(2) + " Fahrenheit");
+                break;
+            case 3:
+                var feet = inputValue * 3.28084;
+                alert(inputValue + " Meters is equal to " + feet.toFixed(2) + " Feet");
+                break;
+            case 4:
+                var meters = inputValue / 3.28084;
+                alert(inputValue + " Feet is equal to " + meters.toFixed(2) + " Meters");
+                break;
+            default:
+                alert("Invalid selection. Please choose a valid conversion option.");
+        }
+    }
+
+    // Call the function when the page loads
+    convertUnits();
+</script>
+
+</body>
+</html>
