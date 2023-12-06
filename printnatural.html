@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N Natural While Loop | Lloyd's Pre-final</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+	
+	body {
+		font-family: verdana;
+	}
+  </style>
+</head>
+<body>
+
+<h2>Natural Numbers</h2>
+
+<script>
+    function printNaturalNumbers() {
+        // Get user input for 'n'
+        var n = parseInt(prompt("Enter the value of n:"));
+
+        // Check if the input is a valid number
+        if (isNaN(n)) {
+            alert("Please enter a valid number.");
+            return;
+        }
+
+        // Display the natural numbers using a while loop
+        var i = 1;
+        var result = "Natural Numbers: ";
+        while (i <= n) {
+            result += i + " ";
+            i++;
+        }
+
+        // Display the result on the webpage
+        var resultElement = document.createElement("p");
+        resultElement.textContent = result;
+        document.body.appendChild(resultElement);
+    }
+
+    // Call the function when the page loads
+    printNaturalNumbers();
+</script>
+
+</body>
+</html>
